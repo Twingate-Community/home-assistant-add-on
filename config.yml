@@ -1,0 +1,16 @@
+name: "Twingate Connector"
+description: "Connector for Twingate"
+version: "1.0.0"
+slug: "twingate"
+init: false
+arch:
+  - aarch64
+  - amd64
+options:
+  access_token: ""
+  refresh_token: ""
+  network: ""
+schema:
+  access_token: str
+  refresh_token: str
+  network: str
