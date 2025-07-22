@@ -79,4 +79,8 @@ if [ -n "${TWINGATE_ACCESS_TOKEN}" ] && [ -n "${TWINGATE_REFRESH_TOKEN}" ]; then
     chmod 0600 "$CONFIG"
 fi
 
+TWINGATE_LABEL_DEPLOYED_BY="home_assistant"
+export TWINGATE_LABEL_DEPLOYED_BY
+
+
 /usr/bin/twingate-connector
