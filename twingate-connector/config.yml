@@ -1,7 +1,7 @@
 name: "Twingate Connector"
 description: "Connector for Twingate"
 version: "1.0.0"
-slug: "twingate"
+slug: "twingate-connector"
 init: false
 arch:
   - aarch64
@@ -14,3 +14,4 @@ schema:
   access_token: str
   refresh_token: str
   network: str
+image: "ghcr.io/Twingate-Community/{arch}-twingate-connector"

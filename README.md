@@ -1,25 +1,18 @@
-## Overview
-This repo holds the Dockerfile and resources Home Assistant needs to install / run a Twingate Connector.
+# Twingate Connector Home Assistant add-on repository
 
-It is based on this [guide]("https://developers.home-assistant.io/docs/add-ons/tutorial/")
 
-## Local Dev
-1. Copy the root of this repo to `/addons` on the host of your Home Assistant instance
-2. Navigate to the `Settings` tab within your Home Assistant instance. Usually `http://homeassistant.local:8123/config/dashboard`
-3. Click the `Add-ons` tab
-4. Click the `Add-on Store` button in the bottom right hand corner of the screen
-5. Click the ellipses in the top right and click `Check for updates`
-6. Search for `Twingate Connector` under `Local add-ons`
-7. Click `Install` and wait for the add on to install
-8. Navigate to the `Configuration` tab
-9. Add an access token to the `access_token` field
-10. Add a refresh token to the `refresh_token` field
-11. Add your remote network name to the `network` field
-12. Navigate back to the `Info` tab
-13. Click `Start`
-14. To monitor the installation of the connector, look at the `Logs` tab.
+[(https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FTwingate-Community%2Fhome-assistant-add-on)
 
-## Supported Architectures
-- aarch64
-- amd64
-- armv7
+## Add-ons
+
+This repository contains the following add-ons
+
+### [Twingate Connector add-on](./twingate-connector)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armv7 Architecture][armv7-shield]
+
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
