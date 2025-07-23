@@ -4,4 +4,4 @@ build_from:
   armv7: ghcr.io/hassio-addons/debian-base/armv7:6c7cbab
 codenotary:
   base_image: codenotary@frenck.dev
-  signer: codenotary@frenck.dev
+  signer: andrewb@twingate.com

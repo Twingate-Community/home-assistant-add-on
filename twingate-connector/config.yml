@@ -16,3 +16,4 @@ schema:
   refresh_token: str
   network: str
 image: "ghcr.io/Twingate-Community/{arch}-twingate-connector"
+codenotary: "andrewb@twingate.com"
