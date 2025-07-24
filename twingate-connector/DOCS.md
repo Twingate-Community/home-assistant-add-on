@@ -8,3 +8,5 @@
 4. Generate an `access token` and a `refresh token`.
 5. Enter the `access token`, `refresh token` and remote network name into the add on configuration.
 6. Click `start`.
+
+TODO: link documentation
