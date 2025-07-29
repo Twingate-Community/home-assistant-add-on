@@ -16,5 +16,5 @@ schema:
   refresh_token: str
   network: str
 ingress: true
-image: "https://ghcr.io/twingate-community/{arch}-twingate-connector"
+image: "ghcr.io/twingate-community/{arch}-twingate-connector"
 codenotary: "andrewb@twingate.com"
