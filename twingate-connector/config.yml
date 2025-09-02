@@ -1,6 +1,6 @@
 name: "Twingate Connector"
 description: "Connector for Twingate"
-version: "1.0.0"
+version: "1.1.0"
 slug: "twingate-connector"
 init: false
 arch:
@@ -11,10 +11,12 @@ options:
   access_token: ""
   refresh_token: ""
   network: ""
+  connector_log_level: "3"
 schema:
   access_token: str
   refresh_token: str
   network: str
+  connector_log_level: str
 ingress: true
 image: "ghcr.io/twingate-community/{arch}-twingate-connector"
 codenotary: "andrewb@twingate.com"
