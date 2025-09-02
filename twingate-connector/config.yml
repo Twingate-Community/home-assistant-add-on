@@ -11,12 +11,12 @@ options:
   access_token: ""
   refresh_token: ""
   network: ""
-  connector_log_level: "3"
+  connector_log_level: "info"
 schema:
   access_token: str
   refresh_token: str
   network: str
-  connector_log_level: str
+  connector_log_level: list(info|debug)
 ingress: true
 image: "ghcr.io/twingate-community/{arch}-twingate-connector"
 codenotary: "andrewb@twingate.com"

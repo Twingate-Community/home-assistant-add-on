@@ -67,11 +67,18 @@ if [[ -z "${TWINGATE_NETWORK}" ]]; then
 fi
 export TWINGATE_NETWORK
 
-TWINGATE_LOG_LEVEL=$(bashio::config 'connector_log_level')
-if [[ -z "${TWINGATE_LOG_LEVEL}" ]]; then
-    echo "connector_log_level is not set. Using default log level (3)"
+log_level=$(bashio::config 'connector_log_level')
+if [[ -z "${log_level}" ]]; then
+    echo "connector_log_level is not set. Using default log level (info)"
+    log_level=info
+fi
+
+if [[ "${log_level}" == "debug" ]]; then
+    TWINGATE_LOG_LEVEL=7
+else
     TWINGATE_LOG_LEVEL=3
 fi
+
 export TWINGATE_LOG_LEVEL
 
 TWINGATE_LABEL_DEPLOYED_BY="home_assistant"
