@@ -2,4 +2,4 @@
 
 This add on installs the Twingate Connector allowing secure access to the rest of your home network.
 
-Check out `DOCS.md` for more information on how to get the add on up and running.
+Check out the official [Getting Started Guide]("https://www.twingate.com/docs/home-assistant-getting-started")

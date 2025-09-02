@@ -67,20 +67,31 @@ if [[ -z "${TWINGATE_NETWORK}" ]]; then
 fi
 export TWINGATE_NETWORK
 
-if [ -n "${TWINGATE_NETWORK}" ]; then
-  echo "TWINGATE_NETWORK=${TWINGATE_NETWORK}" >> "${CONFIG}"
+log_level=$(bashio::config 'connector_log_level')
+if [[ -z "${log_level}" ]]; then
+    echo "connector_log_level is not set. Using default log level (info)"
+    log_level=info
 fi
 
-if [ -n "${TWINGATE_ACCESS_TOKEN}" ] && [ -n "${TWINGATE_REFRESH_TOKEN}" ]; then
-    { \
-        echo "TWINGATE_ACCESS_TOKEN=${TWINGATE_ACCESS_TOKEN}"; \
-        echo "TWINGATE_REFRESH_TOKEN=${TWINGATE_REFRESH_TOKEN}"; \
-    } >> "${CONFIG}"
-    chmod 0600 "$CONFIG"
+if [[ "${log_level}" == "debug" ]]; then
+    TWINGATE_LOG_LEVEL=7
+else
+    TWINGATE_LOG_LEVEL=3
 fi
+
+export TWINGATE_LOG_LEVEL
 
 TWINGATE_LABEL_DEPLOYED_BY="home_assistant"
 export TWINGATE_LABEL_DEPLOYED_BY
 
+{
+  echo "TWINGATE_NETWORK=${TWINGATE_NETWORK}"
+  echo "TWINGATE_ACCESS_TOKEN=${TWINGATE_ACCESS_TOKEN}"
+  echo "TWINGATE_REFRESH_TOKEN=${TWINGATE_REFRESH_TOKEN}"
+  echo "TWINGATE_LOG_LEVEL=${TWINGATE_LOG_LEVEL}"
+  echo "TWINGATE_LABEL_HOSTNAME=$(hostname)"
+  echo "TWINGATE_LABEL_DEPLOYED_BY=${TWINGATE_LABEL_DEPLOYED_BY}"
+} > "$CONFIG"
+chmod 0600 "$CONFIG"
 
 /usr/bin/twingate-connector
