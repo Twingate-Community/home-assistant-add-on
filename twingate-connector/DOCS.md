@@ -9,4 +9,4 @@
 5. Enter the `access token`, `refresh token` and remote network name into the add on configuration.
 6. Click `start`.
 
-Official Docs are coming
+For a more in depth walkthrough, check out the official [Getting Started Guide]("https://www.twingate.com/docs/home-assistant-getting-started")
