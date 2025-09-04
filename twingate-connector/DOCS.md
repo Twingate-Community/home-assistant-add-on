@@ -10,3 +10,5 @@
 6. Click `start`.
 
 For a more in depth walkthrough, check out the official [Getting Started Guide]("https://www.twingate.com/docs/home-assistant-getting-started")
+
+If you need any support, create an issue on the official [Twingate Community Github]("https://github.com/Twingate-Community/home-assistant-add-on/issues")
